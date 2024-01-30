@@ -58,7 +58,6 @@ class BadgeManager {
       parent = child;
       if (subKeyPath == keyPath) {
         child.badgeCount = badgeCount;
-        child.needShow = true;
       }
       notifyBadges.add(child);
     }
@@ -88,7 +87,6 @@ class BadgeManager {
         return;
       }
       if (name == keyPaths.last) {
-        child.needShow = false;
         if (child.getBadgeCount == 0 || isForced) {
           if (child.childList.isNotEmpty && isForced) {
             List childList = child.getAllLinkChildren;

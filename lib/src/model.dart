@@ -3,14 +3,12 @@ class BadgeModel {
   String keyPath;
   int? badgeCount;
   BadgeModel? parent;
-  bool needShow = false;
   List childList = [];
 
   BadgeModel(
     this.name,
     this.keyPath, {
     this.badgeCount,
-    this.needShow = false,
     this.parent,
   });
 
@@ -24,7 +22,6 @@ class BadgeModel {
     if (childList.contains(child)) {
       childList.remove(child);
       if (childList.isEmpty) {
-        needShow = false;
         badgeCount = 0;
       }
     }
@@ -35,7 +32,6 @@ class BadgeModel {
     childList.clear();
     for (BadgeModel item in copy) {
       item.badgeCount = 0;
-      item.needShow = false;
       item.cleanAllChild();
     }
   }
@@ -48,15 +44,19 @@ class BadgeModel {
   }
 
   bool get getNeedShow {
-    if (childList.isNotEmpty) {
-      for (BadgeModel item in childList) {
-        if (item.getNeedShow) {
-          return true;
-        }
-      }
-      return false;
+    if (getBadgeCount > 0) {
+      return true;
     }
-    return needShow;
+    return false;
+    // if (childList.isNotEmpty) {
+    //   for (BadgeModel item in childList) {
+    //     if (item.getBadgeCount > 0) {
+    //       return true;
+    //     }
+    //   }
+    //   return false;
+    // }
+    // return false;
   }
 
   int get getBadgeCount {
