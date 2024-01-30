@@ -16,10 +16,23 @@ App红点链路管理
 
 ## Features
 
+## Supported platforms
+- [x] Android
+- [x] iOS
+- [x] Web
+- [x] Windows
+- [x] macOS
+- [x] Linux
+
+## Screenshots
+![image](https://i.postimg.cc/wB84PkBy/Simulator-Screenshot-i-Phone-15-Pro-Max-2024-01-30-at-18-19-26.png)
 
 ## Getting started
-share_plus: x.x.x
-
+    
+```yaml
+dependencies:
+  share_plus: x.x.x
+ ```
 
 ## Usage
 ### Main
