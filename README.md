@@ -12,6 +12,7 @@ and the Flutter guide for
 -->
 
 App红点链路管理
+参考 iOS `RJBadgeKit` 实现
 
 ## Features
 
