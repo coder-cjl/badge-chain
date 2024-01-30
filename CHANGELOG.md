@@ -1,3 +1,6 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* 发布第一个版本，包含以下功能：
+  * 红点提示管理
+  * CountWidget
+  * DotWidget

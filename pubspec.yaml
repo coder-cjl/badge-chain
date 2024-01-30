@@ -1,7 +1,7 @@
 name: badge_chain
-description: A new Flutter package project.
+description: App红点链路管理
 version: 0.0.1
-homepage:
+homepage: https://github.com/coder-cjl/badge-chain.git
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
